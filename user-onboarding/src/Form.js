@@ -1,5 +1,5 @@
 export default function Form (props) {
-    const { update, submit, values } = props
+    const { update, submit, values, disabled, errors } = props
 
     const onChange = evt => {
         const { name, value, checked, type } = evt.target
@@ -47,7 +47,13 @@ export default function Form (props) {
                 checked={values.terms}
             />
         </label>
-        <button>Submit</button>
+        <button disabled={disabled}>Submit</button>
+        <div className='errors'>
+          <div>{errors.name}</div>
+          <div>{errors.email}</div>
+          <div>{errors.password}</div>
+          <div>{errors.terms}</div>
+        </div>
     </form>
     )
 }

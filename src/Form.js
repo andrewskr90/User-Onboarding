@@ -47,7 +47,7 @@ export default function Form (props) {
                 checked={values.terms}
             />
         </label>
-        <button disabled={disabled}>Submit</button>
+        <button id='submitBtn' disabled={disabled}>Submit</button>
         <div className='errors'>
           <div>{errors.name}</div>
           <div>{errors.email}</div>
